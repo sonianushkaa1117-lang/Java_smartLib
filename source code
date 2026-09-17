@@ -1,0 +1,81 @@
+The SmartLib project is organized into modular components to make the source code easy 
+to understand, maintain, test, and extend. The project contains the Java source files along 
+with the required test, data, configuration, and documentation files.
+
+PROJECT STRUCTURE
+SmartLib/
+│
+├── src/
+│   ├── main/
+│   │   └── java/
+│   │       └── com/
+│   │           └── smartlib/
+│   │               ├── presentation/
+│   │               │   ├── Main.java
+│   │               │   ├── ConsoleUI.java
+│   │               │   ├── DemoRunner.java
+│   │               │   └── MenuAction.java
+│   │               │
+│   │               ├── service/
+│   │               │   ├── CatalogService.java
+│   │               │   ├── MemberService.java
+│   │               │   ├── LoanService.java
+│   │               │   ├── ReportService.java
+│   │               │   └── FinePolicy.java
+│   │               │
+│   │               ├── domain/
+│   │               │   ├── LibraryItem.java
+│   │               │   ├── Book.java
+│   │               │   ├── Journal.java
+│   │               │   ├── DigitalMedia.java
+│   │               │   ├── Member.java
+│   │               │   ├── Loan.java
+│   │               │   ├── CategoryNode.java
+│   │               │   ├── Borrowable.java
+│   │               │   ├── Searchable.java
+│   │               │   ├── ItemStatus.java
+│   │               │   └── MembershipTier.java
+│   │               │
+│   │               ├── persistence/
+│   │               │   ├── CsvRepository.java
+│   │               │   └── DataSeeder.java
+│   │               │
+│   │               └── util/
+│   │                   ├── AppConfig.java
+│   │                   ├── AppLogger.java
+│   │                   ├── Validator.java
+│   │                   ├── IdGenerator.java
+│   │                   └── EntityInspector.java
+│   │
+│   └── test/
+│       └── java/
+│           └── com/
+│               └── smartlib/
+│                   └── test/
+│                       ├── CatalogServiceTest.java
+│                       ├── MemberServiceTest.java
+│                       ├── LoanServiceTest.java
+│                       ├── ValidatorTest.java
+│                       ├── PersistenceTest.java
+│                       └── TestRunner.java
+│
+├── data/
+│   ├── items.csv
+│   ├── members.csv
+│   └── loans.csv
+│
+├── README.md
+├── statement.md
+├── pom.xml / build configuration
+└── .gitignore
+
+
+FILE ORGANISATION
+
+Presentation Layer – Handles user interaction, menus, and application execution.
+Service Layer – Contains the main business logic for catalog, members, loans, reports, and fine calculation.
+Domain Layer – Defines the core entities, interfaces, enums, and relationships of the library system.
+Persistence Layer – Handles CSV-based storage and initial data generation.
+Utility Components – Provide validation, configuration, logging, ID generation, and reflection-based inspection.
+Test Files – Verify the functionality of the major services, validation, and persistence components.
+Data Files – Store library items, members, and loan records using CSV format.
